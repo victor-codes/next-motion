@@ -1,0 +1,12 @@
+.gallery {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+.img {
+  width: 400px;
+  height: auto;
+}
+.frame {
+  overflow: hidden;
+}

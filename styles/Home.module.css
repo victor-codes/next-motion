@@ -114,3 +114,11 @@
     flex-direction: column;
   }
 }
+.h1 {
+  position: fixed;
+  bottom: 0%;
+  margin: 0;
+  line-height: 11vw;
+  color: #f2f2f2;
+  font-size: 15vw;
+}

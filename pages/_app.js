@@ -1,7 +1,20 @@
-import '../styles/globals.css'
+import { AnimatePresence } from "framer-motion";
+import { useRouter } from "next/router";
+import "../styles/globals.css";
 
-function MyApp({ Component, pageProps }) {
-  return <Component {...pageProps} />
+function handleExit() {
+  if (typeof window !== undefined) {
+    window.scrollTo({ top: 0 });
+  }
 }
 
-export default MyApp
+function MyApp({ Component, pageProps }) {
+  const router = useRouter();
+  return (
+    <AnimatePresence exitBeforeEnter onExitComplete={handleExit}>
+      <Component {...pageProps} key={router.route} />
+    </AnimatePresence>
+  );
+}
+
+export default MyApp;

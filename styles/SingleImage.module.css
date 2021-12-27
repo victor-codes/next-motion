@@ -1,0 +1,35 @@
+.back {
+  position: fixed;
+  right: 56px;
+  top: 56px;
+  display: flex;
+  flex-direction: row;
+  font-size: 3vw;
+}
+
+
+.img_info {
+  width: 85vw;
+  display: flex;
+  flex-direction: row;
+}
+
+.img_info img {
+  height: 100vh;
+  margin-right: 104px;
+  width: 70vw;
+  object-fit: cover;
+}
+
+.img_info h2 {
+  margin-top: 136px;
+  font-size: 4vw;
+}
+
+.container {
+  max-height: 100vh;
+}
+
+.name_container {
+  overflow: hidden;
+}
