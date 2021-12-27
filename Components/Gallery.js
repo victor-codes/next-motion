@@ -68,7 +68,7 @@ function Gallery() {
         variants={{ exit: { transition: { staggerChildren: 0.1 } } }}
       >
         {images.map((image, id) => (
-          <Thumbnails key={id} name={image.name} i={id + 1} path={image.path} />
+          <Thumbnails key={id} name={image.name} i={id} path={image.path} />
         ))}
       </motion.div>
     </div>

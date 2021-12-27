@@ -26,7 +26,7 @@ export async function getStaticProps({ params }) {
   const number = Number.parseInt(params.image, 10);
   return {
     props: {
-      index: number - 1,
+      index: number,
     },
   };
 }
