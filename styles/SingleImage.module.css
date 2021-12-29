@@ -5,23 +5,32 @@
   display: flex;
   flex-direction: row;
   font-size: 3vw;
+  font-size: clamp(1rem, 3vw, 2.5rem);
+  color: rgba(51, 51, 51, 0.7);
 }
 
-
 .img_info {
+  position: relative;
+  grid-template-areas:
+    "img img text"
+    "img img text"
+    "img img next";
   width: 85vw;
-  display: flex;
+  display: grid;
   flex-direction: row;
 }
 
 .img_info img {
   height: 100vh;
-  margin-right: 104px;
-  width: 70vw;
+  grid-area: img;
+  margin-right: calc(0.0722 * 100vw);
+  width: 100%;
+  max-width: 600px;
   object-fit: cover;
 }
 
 .img_info h2 {
+  color: #333;
   margin-top: 136px;
   font-size: 4vw;
 }
@@ -31,5 +40,38 @@
 }
 
 .name_container {
+  grid-area: text;
   overflow: hidden;
+}
+.image_hover {
+  position: relative;
+  height: fit-content;
+}
+
+.image_hoverEl {
+  position: absolute;
+  width: 0px;
+  height: 240px;
+  background-color: #f2f2f2;
+  opacity: 0;
+  bottom: 56px;
+  background-repeat: no-repeat;
+  z-index: 5;
+}
+
+.next_image {
+  display: flex;
+  grid-area: next;
+  width: 100%;
+  max-width: 256px;
+  align-items: flex-end;
+  position: relative;
+  padding-bottom: 56px;
+  font-size: clamp(1rem, 2vw, 2.25rem);
+  color: rgba(51, 51, 51, 0.7);
+}
+
+.next_arrow {
+  display: inline-block;
+  transform: rotate(-180deg);
 }

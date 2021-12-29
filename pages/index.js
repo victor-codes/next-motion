@@ -5,9 +5,13 @@ import styles from "../styles/Home.module.css";
 
 export default function Home() {
   return (
-    <main className={styles.main}>
-      <Gallery />
-      {/* <h1 className={styles.h1}>Motion</h1> */}
-    </main>
+    <>
+      <Head>
+        <title>Motion</title>
+      </Head>
+      <main className={styles.main}>
+        <Gallery />
+      </main>
+    </>
   );
 }

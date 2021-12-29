@@ -10,9 +10,10 @@ function handleExit() {
 
 function MyApp({ Component, pageProps }) {
   const router = useRouter();
+  
   return (
     <AnimatePresence exitBeforeEnter onExitComplete={handleExit}>
-      <Component {...pageProps} key={router.route} />
+      <Component {...pageProps} key={router.asPath} />
     </AnimatePresence>
   );
 }

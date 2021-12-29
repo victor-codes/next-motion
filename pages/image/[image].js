@@ -9,15 +9,13 @@ function Page({ index }) {
 
 export async function getStaticPaths() {
   return {
-    paths: images
-      .map((id) => id)
-      .map((_id, index) => {
-        return {
-          params: {
-            image: `${index}`,
-          },
-        };
-      }),
+    paths: images.map((_id, index) => {
+      return {
+        params: {
+          image: `${index}`,
+        },
+      };
+    }),
     fallback: false,
   };
 }

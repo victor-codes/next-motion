@@ -25,6 +25,7 @@ const frameVariants = {
     scale: 0.95,
   },
 };
+
 const imageVariants = {
   hover: { scale: 1.1 },
 };
@@ -38,12 +39,7 @@ const Thumbnails = ({ name, path, i }) => {
         variants={frameVariants}
         transition={transition}
       >
-        <Link
-          href="/image/[index]"
-          as={`/image/${i}`}
-          scroll={false}
-          // passHref
-        >
+        <Link href="/image/[image]" as={`/image/${i}`} scroll={false} passHref>
           <motion.img
             className={styles.img}
             src={`https://images.pexels.com/${path}?auto=format&fit=crop&w=1500`}
@@ -59,19 +55,17 @@ const Thumbnails = ({ name, path, i }) => {
 
 function Gallery() {
   return (
-    <div>
-      <motion.div
-        className={styles.gallery}
-        initial="initial"
-        animate="enter"
-        exit="exit"
-        variants={{ exit: { transition: { staggerChildren: 0.1 } } }}
-      >
-        {images.map((image, id) => (
-          <Thumbnails key={id} name={image.name} i={id} path={image.path} />
-        ))}
-      </motion.div>
-    </div>
+    <motion.div
+      className={styles.gallery}
+      initial="initial"
+      animate="enter"
+      exit="exit"
+      variants={{ exit: { transition: { staggerChildren: 0.1 } } }}
+    >
+      {images.map((image, id) => (
+        <Thumbnails key={id} name={image.name} i={id} path={image.path} />
+      ))}
+    </motion.div>
   );
 }
 

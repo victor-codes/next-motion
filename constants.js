@@ -16,15 +16,15 @@ export const images = [
     path: "photos/7872628/pexels-photo-7872628.jpeg",
   },
   {
-    name: "Woman Wearing Pullover Hoodie",
-    path: "photos/3353607/pexels-photo-3353607.jpeg",
-  },
-  {
     name: "Woman in Black and White Checked Mini Skirt and Brown Coat",
     path: "photos/3597932/pexels-photo-3597932.jpeg",
   },
   {
     name: "Grayscale Photo of Woman's Face",
     path: "photos/4664273/pexels-photo-4664273.jpeg",
+  },
+  {
+    name: "Woman Wearing Pullover Hoodie",
+    path: "photos/3353607/pexels-photo-3353607.jpeg",
   },
 ];
